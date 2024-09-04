@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //디폴트값 사용하기
+        const sayHello = (name) => {console.log(`${name}님 안녕하세요`)}
+        sayHello("홍길동");
+        sayHello();
+        const sayHello2 = (name="guest") => console.log(`${name}님 안녕하세요`) 
+        sayHello2();
+
+        const myProfile = {
+            age: 24,
+        }
+        
+        const {name="guest", age=26} = myProfile;
+        console.log(`${name}님의 나이는 ${age}입니다.`);
+    </script>
+</body>
+</html>
