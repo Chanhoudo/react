@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //자바스크립트의 변수 선언 키워드: var
+        //var -1. 변수 덮어쓰기 가능 2. 변수 재선언 가능
+        /* var value1 = "var 변수 선언";
+        console.log(value1);
+
+        value1 = "var 변수 덮어쓰기 가능";
+        console.log(value1);
+
+        var value1 = "var 변수 재선언 가능";
+        console.log(value1);
+
+        //자바스크립트의 변수 선언 키워드: let
+        //1. 덮어쓰기 가능 2. 재선언 불가능
+        let value2 = "let 변수 선언";
+        console.log(value2);
+
+        value2 = "let 변수 덮어쓰기";
+        console.log(value2);*/
+
+        //const 정의 변수: 기본형은 덮어쓰기 불가능, 객체형은 덮어쓰기 가능
+        //기본형 (숫자, 문자열, 논리)
+        //객체형 (배열, 함수, 객체)
+        const obj1 = {
+            name:  "pop",
+            age: 24
+        };
+
+        console.log(obj1.name);
+        console.log(obj1.age);
+
+        obj1.name = "popcorn";
+        console.log(obj1.name);
+
+        obj1.addr = "seoul";
+        console.log(obj1);
+    </script>
+</body>
+</html>

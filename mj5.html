@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myProfile = {
+            name: "팝콘",
+            age: 24,
+            gender: "w",
+        };
+        
+        const message = `이름은 ${myProfile.name}, 나이는 ${myProfile.age}, 성별은 ${myProfile.gender}입니다.`;
+
+        console.log(message);
+
+        const {name, age, gender} = myProfile;
+        const message2 = `이름은 ${name}, 나이는 ${age}, 성별은 ${gender}입니다.`;
+        console.log(message2);
+        
+        //순서 바꾸거나 적게 가능, 별명 지정도 가능
+        const { name: name2, age: age2 } = myProfile;
+        const message3 = `이름은 ${name2}, 나이는 ${age2}입니다.`;
+
+        console.log(message3);
+
+        //배열의 분할 대입
+        const myProfile2 = ["팝콘", 24];
+        //배열 요소 접근은 인덱스로 한다.
+        const message4 = `이름은 ${myProfile2[0]}, 나이는 ${myProfile2[1]}입니다.`;
+        console.log(message4);
+
+        const [name3] = myProfile2;
+        const message8 = `이름은 ${name3}입니다.`;
+        console.log(message8);
+    </script>
+</body>
+</html>
