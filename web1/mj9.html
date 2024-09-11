@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const val = 1 > 0 ? "참" : "거짓"
+        console.log(val);
+
+        //화살표 함수를 사용한 예시
+        const result = (num) => {
+            if (num%2 == 0) console.log("even")
+            else console.log("odd")
+        }
+
+        const result2 = (num) => (num % 2 == 0 ? console.log('Even') : console.log('Odd'))
+        result(3)
+        result(4)
+
+        result2(3)
+        result2(4)
+
+        //사용자 입력 자료형 판단
+        let val2 = 10;
+
+        const result3 = (num) => {
+            const result = typeof(val2) == "number" ? 
+            val2.toLocaleString() : 
+            "숫자를 입력해주세요."
+
+            console.log(result)
+        }
+
+        result3(1234)
+        result3("1234")
+
+        const checkSumOver100 = (num1, num2) =>{
+            const result = num1 + num2 < 100 ? 
+            "허용범위 안 입니다." : 
+            "100을 넘었습니다."
+
+            return result
+        }
+
+        console.log(checkSumOver100(50,40)) //허용범위 안 입니다.
+        console.log(checkSumOver100(60,50)) //100을 넘었습니다.
+
+        const flag1 = true
+        const flag2 = false
+        if(flag1 || flag2)
+            console.log("두 플래그 중 하나는 true 입니다.")
+            
+        if(flag1 && flag2)
+        console.log("두 플래그 중 하나는 true 입니다.")
+
+        //null, undefined, 0 모두 false 처리가 된다.
+        const num3 = null;
+        const fee = num3 || alert ("금액이 설정되지 않았습니다.")// 새창으로 띄우기
+        console.log(fee)
+
+        const num4 = 100;
+        const fee2 = num4 || "금액이 설정되지 않았습니다."
+        console.log(fee2)
+    </script>
+</body>
+</html>
