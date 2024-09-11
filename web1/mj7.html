@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr1 = [1, 2];
+        console.log(arr1);
+        console.log(...arr1);
+
+        //함수 호출시 스프레드 연산자 이용하기
+        const sum = (num1, num2) => num1 + num2
+
+        console.log(sum(...arr1));
+
+        const arr2 = [1,2,3,4,5];
+        const [num1, num2, ...arr3] = arr2;
+        
+        console.log(`${num1}, ${num2}, ${arr3}`);
+
+        const arr4 = [10, 20];
+        const arr5 = [30, 40];
+        const arr6 = [];
+
+        for (i = 0; i < arr4.length; i++)
+            arr6.push(arr4[i]);
+        for (i = 0; i < arr5.length; i++)
+            arr6.push(arr5[i]);
+        console.log(arr6);
+        //배열 결합
+        const arr7 = [...arr4, ...arr5];
+        console.log(arr7);
+        //배열 복사
+        const arr8 = [...arr4];
+        console.log(arr8);
+
+        const obj1 = {
+            val1: 10,
+            val2: 20,
+        }
+
+        const obj2 = {
+            val1: 30,
+            val2: 40,
+        }
+
+        obj3 = {...obj1}
+        console.log(obj1)
+        console.log(obj3)
+        /**
+        const obj4 = {...obj1, ...obj2}
+        console.log(`obj4: ${obj4}`);
+        ffff
+        **/
+        
+    </script>
+</body>
+</html>
+
+
